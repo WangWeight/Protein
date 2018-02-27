@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3D7F494-4D68-4984-AEB5-4CF0E21EDF9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Protein.Enzyme.DAL.MDB</RootNamespace>
+    <AssemblyName>Protein.Enzyme.DAL.MDB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Protein.Enzyme.DAL.MDB.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\BuildingBlocks\Lemonade\Lic\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\..\BuildingBlocks\Lemonade\Lic\x64\Protein.Enzyme.DAL.MDB.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClauseType\ClauseTypeBase.cs" />
+    <Compile Include="ClauseType\ClauseTypeString.cs" />
+    <Compile Include="ClauseType\ClauseTypeNum.cs" />
+    <Compile Include="FieldType\FieldSetDouble.cs" />
+    <Compile Include="FieldType\FieldSetByteArray.cs" />
+    <Compile Include="GroupBy.cs" />
+    <Compile Include="InClause.cs" />
+    <Compile Include="MDBHelper.cs" />
+    <Compile Include="CmdType.cs" />
+    <Compile Include="CreateTable.cs" />
+    <Compile Include="DalSql.cs" />
+    <Compile Include="DeleteCmd.cs" />
+    <Compile Include="DvTable.cs" />
+    <Compile Include="DvTableBatch.cs" />
+    <Compile Include="DvWhere.cs" />
+    <Compile Include="Entity\EntityFactory.cs" />
+    <Compile Include="Entity\EntityTypeAdapterLog.cs" />
+    <Compile Include="Entity\ProteinLog.cs" />
+    <Compile Include="Entity\ProteinLogger.cs" />
+    <Compile Include="FieldType\FieldSetBase.cs" />
+    <Compile Include="FieldType\FieldSetDateTime.cs" />
+    <Compile Include="FieldType\FieldSetFloat.cs" />
+    <Compile Include="FieldType\FieldSetInt.cs" />
+    <Compile Include="FieldType\FieldSetLong.cs" />
+    <Compile Include="FieldType\FieldSetString.cs" />
+    <Compile Include="FieldType\TypeToAccessPar.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="InsertCmd.cs" />
+    <Compile Include="JoinEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectCmd.cs" />
+    <Compile Include="StockCmd.cs" />
+    <Compile Include="UpdateCmd.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Protein.Enzyme\Protein.Enzyme.csproj">
+      <Project>{E2D1C775-4820-43A5-9189-036BF0AD2446}</Project>
+      <Name>Protein.Enzyme</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

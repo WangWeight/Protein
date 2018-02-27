@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2D1C775-4820-43A5-9189-036BF0AD2446}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Protein.Enzyme</RootNamespace>
+    <AssemblyName>Protein.Enzyme</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Protein.Enzyme.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\BuildingBlocks\Lemonade\Lic\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\..\BuildingBlocks\Lemonade\Lic\x64\Protein.Enzyme.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DynamicProxy\DefProxy.cs" />
+    <Compile Include="IO\HookStruct.cs" />
+    <Compile Include="IO\副本 KeyHook.cs" />
+    <Compile Include="Layout\Configuration\LogOrgan.cs" />
+    <Compile Include="Log\OSLog.cs" />
+    <Compile Include="Message\IMessageHistoryContainer.cs" />
+    <Compile Include="Message\MessageHistory.cs" />
+    <Compile Include="Message\MessageHistoryContainer.cs" />
+    <Compile Include="Message\Processors\ProcessInnerExceptionLog.cs" />
+    <Compile Include="ProteinErrorType.cs" />
+    <Compile Include="DAL\ClauseElement.cs" />
+    <Compile Include="DAL\IGroupBy.cs" />
+    <Compile Include="DAL\InClauseOperator.cs" />
+    <Compile Include="DAL\JoinElement.cs" />
+    <Compile Include="ExtendConfig\ExtendConfigFactory.cs" />
+    <Compile Include="ExtendConfig\ECC.cs" />
+    <Compile Include="ExtendConfig\IECContainer.cs" />
+    <Compile Include="ExtendConfig\IExtendConfigFactory.cs" />
+    <Compile Include="DAL\EntityTypeAdapter.cs" />
+    <Compile Include="DAL\DataHelper.cs" />
+    <Compile Include="DAL\EntityBase.cs" />
+    <Compile Include="DAL\EntityTypeAdapterGenerics.cs" />
+    <Compile Include="DAL\ICreateTable.cs" />
+    <Compile Include="DAL\IDALManager.cs" />
+    <Compile Include="DAL\IDalSql.cs" />
+    <Compile Include="DAL\IDBInfo.cs" />
+    <Compile Include="DAL\IDvTable.cs" />
+    <Compile Include="DAL\IDvTableBatch.cs" />
+    <Compile Include="DAL\IDvWhere.cs" />
+    <Compile Include="DAL\IEntityBase.cs" />
+    <Compile Include="DAL\IEntityFactory.cs" />
+    <Compile Include="DAL\IFilter.cs" />
+    <Compile Include="DAL\IJoinEntity.cs" />
+    <Compile Include="DAL\LinkOperator.cs" />
+    <Compile Include="DAL\Operator.cs" />
+    <Compile Include="Layout\Configuration\ExConfigCollection.cs" />
+    <Compile Include="Layout\Configuration\Msg.cs" />
+    <Compile Include="Layout\Configuration\ExConfig.cs" />
+    <Compile Include="Layout\Mechanisms\MachineDBInfo.cs" />
+    <Compile Include="Layout\Mechanisms\MachineEntityHandler.cs" />
+    <Compile Include="Layout\Mechanisms\MachineExConfig.cs" />
+    <Compile Include="Repository\ClassDesignsHandler.cs" />
+    <Compile Include="Repository\DalHandler.cs" />
+    <Compile Include="Repository\DescriptionExtensions.cs" />
+    <Compile Include="Repository\Encrypt.cs" />
+    <Compile Include="IO\KeyHook.cs" />
+    <Compile Include="Repository\ProteinHandler.cs" />
+    <Compile Include="Repository\TxtHelper.cs" />
+    <Compile Include="Repository\NormalIO.cs" />
+    <Compile Include="Repository\XmlHelper.cs" />
+    <Compile Include="Layout\Configuration\DAlEntity.cs" />
+    <Compile Include="Layout\Configuration\DataBase.cs" />
+    <Compile Include="Layout\Configuration\ProteinConfig.cs" />
+    <Compile Include="Layout\Configuration\ProteinCustomSection.cs" />
+    <Compile Include="Layout\Mechanisms\MachineLog.cs" />
+    <Compile Include="Layout\ProxyAdapter\ProxyDefaul.cs" />
+    <Compile Include="Layout\ProxyAntipod.cs" />
+    <Compile Include="Repository\DelegateHandler.cs" />
+    <Compile Include="Design\ClassDrive.cs" />
+    <Compile Include="Design\ProxyInterceptor.cs" />
+    <Compile Include="DynamicProxy\AssertUtil.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\AbstractCodeBuilder.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\AbstractEasyType.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\ConstructorCodeBuilder.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\ConstructorCollection.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyCallable.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyConstructor.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyDefaultConstructor.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyEvent.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyMethod.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyNested.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyProperty.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyRuntimeConstructor.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyRuntimeMethod.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EasyType.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\EventsCollection.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\IEasyMember.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\MethodCodeBuilder.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\MethodCollection.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\NestedTypeCollection.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\PropertiesCollection.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\AddressOfReferenceExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ArgumentReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\AssignArrayStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\AssignStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\BinaryExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ConditionExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ConstructorInvocationExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ConvertExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\Expression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ExpressionStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\FieldReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\FixedReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\GotoStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\IEmitter.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\IndirectReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\LabelReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\LoadRefArrayElementExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\LocalReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\LockBlockExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\MarkBranchStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\MethodInvocationExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\MethodPointerExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\MethodTokenExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\NewArrayExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\NewInstanceExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\NopStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\NullExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\PopValueFromStackStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\Reference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ReferenceExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ReferencesToObjectArrayExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ReturnReferenceExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\ReturnStatement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\SelfReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\Statement.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\TypeReference.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\TypeTokenExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\SimpleAST\VirtualMethodInvocationExpression.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\Utils\ArgumentsUtil.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\Utils\LdcOpCodesDictionary.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\Utils\LdindOpCodesDictionary.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\Utils\OpCodeUtil.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeBuilder\Utils\StindOpCodesDictionary.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeGenerators\BaseCodeGenerator.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeGenerators\CallableField.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeGenerators\ClassProxyGenerator.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeGenerators\InterfaceProxyGenerator.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeGenerators\ModuleScope.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeGenerators\ProxyGenerationException.cs" />
+    <Compile Include="DynamicProxy\Builder\CodeGenerators\Set.cs" />
+    <Compile Include="DynamicProxy\Builder\DefaultProxyBuilder.cs" />
+    <Compile Include="DynamicProxy\Builder\IProxyBuilder.cs" />
+    <Compile Include="DynamicProxy\GeneratorContext.cs" />
+    <Compile Include="DynamicProxy\ICallable.cs" />
+    <Compile Include="DynamicProxy\IInterceptor.cs" />
+    <Compile Include="DynamicProxy\IInvocation.cs" />
+    <Compile Include="DynamicProxy\Invocation\AbstractInvocation.cs" />
+    <Compile Include="DynamicProxy\Invocation\InterfaceInvocation.cs" />
+    <Compile Include="DynamicProxy\Invocation\SameClassInvocation.cs" />
+    <Compile Include="DynamicProxy\ProxyGenerator.cs" />
+    <Compile Include="DynamicProxy\Serialization\ProxyObjectReference.cs" />
+    <Compile Include="DynamicProxy\StandardInterceptor.cs" />
+    <Compile Include="Log\ILog.cs" />
+    <Compile Include="Log\ILogger.cs" />
+    <Compile Include="Log\LoggerManager.cs" />
+    <Compile Include="Log\LogType.cs" />
+    <Compile Include="Message\IMessageBus.cs" />
+    <Compile Include="Message\IProcessor.cs" />
+    <Compile Include="Message\MessageBus.cs" />
+    <Compile Include="Message\MessageFactory.cs" />
+    <Compile Include="Message\MessageObject.cs" />
+    <Compile Include="Message\MessageType.cs" />
+    <Compile Include="Message\Processors\ProcessDebugLog.cs" />
+    <Compile Include="Message\Processors\ProcessExceptionLog.cs" />
+    <Compile Include="Message\Processors\ProcessSysInfoLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Captcha.cs" />
+    <Compile Include="UI\ListItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Control\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
